@@ -1,4 +1,4 @@
-package com.example.carsfans.presentation.list.ui
+package com.example.carsfans.presentation.list.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

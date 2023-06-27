@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraint_layout"
+    android:id="@+id/post_constraint_layout"
     android:layout_width="200dp"
     android:layout_height="200dp"
     android:padding="5dp">
@@ -81,7 +81,7 @@
                 android:id="@+id/number_of_comments"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="6dp"
+                android:layout_marginStart="4dp"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/comments_image"
                 app:layout_constraintStart_toEndOf="@id/comments_image"

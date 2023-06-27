@@ -5,6 +5,7 @@
     <string name="car_image">car_image</string>
     <string name="default_text">default text</string>
     <string name="back_button">back button</string>
+    <string name="car_info_text">%1$s %2$s %3$s %4$s %5$s %6$d</string>
 
     <!--Info screen-->
     <string name="brand_name">Brand: %1$s</string>
@@ -15,5 +16,6 @@
     <string name="account_image">account image</string>
     <string name="account_name">default acc name</string>
     <string name="like_image">like image</string>
+
 
 </resources>

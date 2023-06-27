@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.example.carsfans.presentation.list.ui.ListFragment"
+        android:name="com.example.carsfans.presentation.list.ui.fragments.ListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" >
         <action
