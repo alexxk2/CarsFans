@@ -74,6 +74,8 @@ class ListFragment : Fragment() {
         }
 
         makeInfiniteScroll()
+
+        binding.refreshButton.setOnClickListener { viewModel.getCarsList() }
     }
 
     private fun createRecyclerView() {
@@ -130,16 +132,21 @@ class ListFragment : Fragment() {
     private fun showContent() {
         binding.recyclerView.visibility = View.VISIBLE
         binding.progressBar.visibility = View.GONE
+        binding.errorMessage.visibility = View.INVISIBLE
+        binding.refreshButton.visibility = View.INVISIBLE
     }
 
     private fun showLoading() {
         binding.progressBar.visibility = View.VISIBLE
+        binding.errorMessage.visibility = View.INVISIBLE
+        binding.refreshButton.visibility = View.INVISIBLE
     }
 
     private fun showError() {
         binding.recyclerView.visibility = View.INVISIBLE
         binding.progressBar.visibility = View.GONE
         binding.errorMessage.visibility = View.VISIBLE
+        binding.refreshButton.visibility = View.VISIBLE
     }
 
     private fun scrollToNeededItem(list: List<CarInfo>){

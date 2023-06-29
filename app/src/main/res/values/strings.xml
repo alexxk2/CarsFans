@@ -17,5 +17,6 @@
     <string name="account_image">account image</string>
     <string name="account_name">default acc name</string>
     <string name="like_image">like image</string>
+    <string name="try_again">TRY AGAIN</string>
 
 </resources>

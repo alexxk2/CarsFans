@@ -94,6 +94,11 @@ class InfoFragment : Fragment() {
 
         makeInfiniteScroll()
 
+        binding.refreshButton.setOnClickListener {
+            viewModel.getSingleCarInfo(carId)
+            viewModel.getPosts(carId)
+        }
+
     }
 
     private fun bindViews(singleCar: SingleCar) {
@@ -131,6 +136,8 @@ class InfoFragment : Fragment() {
             avatarImage.visibility = View.VISIBLE
             accountName.visibility = View.VISIBLE
             infoProgressBar.visibility = View.INVISIBLE
+            refreshButton.visibility = View.INVISIBLE
+            errorMessage.visibility = View.INVISIBLE
         }
     }
 
@@ -138,6 +145,8 @@ class InfoFragment : Fragment() {
         with(binding) {
             postsRecyclerView.visibility = View.VISIBLE
             postsProgressBar.visibility = View.INVISIBLE
+            refreshButton.visibility = View.INVISIBLE
+            errorMessage.visibility = View.INVISIBLE
         }
     }
 
@@ -152,6 +161,8 @@ class InfoFragment : Fragment() {
             avatarImage.visibility = View.INVISIBLE
             accountName.visibility = View.INVISIBLE
             infoProgressBar.visibility = View.VISIBLE
+            refreshButton.visibility = View.INVISIBLE
+            errorMessage.visibility = View.INVISIBLE
         }
     }
 
@@ -159,6 +170,8 @@ class InfoFragment : Fragment() {
         with(binding) {
             postsRecyclerView.visibility = View.INVISIBLE
             postsProgressBar.visibility = View.VISIBLE
+            refreshButton.visibility = View.INVISIBLE
+            errorMessage.visibility = View.INVISIBLE
         }
     }
 
@@ -177,6 +190,7 @@ class InfoFragment : Fragment() {
             postsRecyclerView.visibility = View.INVISIBLE
             postsProgressBar.visibility = View.INVISIBLE
             errorMessage.visibility = View.VISIBLE
+            refreshButton.visibility = View.VISIBLE
         }
 
     }
