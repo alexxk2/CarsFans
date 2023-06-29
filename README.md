@@ -16,6 +16,6 @@
 + Debounce  
 + Glide
 
-## Скриншоты основных экранов
+## Скриншот одного из экранов
 
 ![Info screen](https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/screenshot.jpg)
