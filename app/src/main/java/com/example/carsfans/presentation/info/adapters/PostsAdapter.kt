@@ -2,20 +2,19 @@ package com.example.carsfans.presentation.info.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.carsfans.R
 import com.example.carsfans.databinding.PostItemBinding
-import com.example.carsfans.domain.PostInfo
+import com.example.carsfans.domain.models.PostInfo
 
 class PostsAdapter(
-    private var dataSet: List<PostInfo>,
-    private val context: Context,
-    private val actionListener: PostActionListener
+    private val context: Context
 
-    ): RecyclerView.Adapter<PostsAdapter.PostViewHolder>(), View.OnClickListener {
+    ): ListAdapter<PostInfo, PostsAdapter.PostViewHolder>(diffCallBack) {
 
     class PostViewHolder(val binding: PostItemBinding): RecyclerView.ViewHolder(binding.root)
 
@@ -23,14 +22,11 @@ class PostsAdapter(
         val inflater = LayoutInflater.from(parent.context)
         val binding = PostItemBinding.inflate(inflater,parent,false)
 
-        binding.postConstraintLayout.setOnClickListener(this)
-        binding.root.setOnClickListener(this)
-
         return PostViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        val item = dataSet[position]
+        val item = getItem(position)
 
         with(holder.binding){
             Glide.with(context)
@@ -42,21 +38,22 @@ class PostsAdapter(
             postText.text = item.postText
             numberOfLikes.text = item.likeCount.toString()
             numberOfComments.text = item.commentCount.toString()
+            root.tag = this
+            postConstraintLayout.tag = this
         }
 
     }
 
-    override fun getItemCount(): Int  = dataSet.size
+    companion object{
+        val diffCallBack = object : DiffUtil.ItemCallback<PostInfo>() {
 
-    override fun onClick(v: View?) {
-        val postInfo = v?.tag as PostInfo
-        when(v.id){
-            R.id.post_constraint_layout -> actionListener.onItemClick(postInfo)
-            else -> actionListener.onItemClick(postInfo)
+            override fun areItemsTheSame(oldItem: PostInfo, newItem: PostInfo): Boolean {
+                return false
+            }
+
+            override fun areContentsTheSame(oldItem: PostInfo, newItem: PostInfo): Boolean {
+                return false
+            }
         }
-    }
-
-    interface PostActionListener{
-        fun onItemClick(postInfo: PostInfo)
     }
 }

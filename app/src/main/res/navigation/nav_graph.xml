@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_listFragment_to_infoFragment"
             app:destination="@id/infoFragment" />
+        <argument
+            android:name="position"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/infoFragment"
@@ -22,5 +25,11 @@
         <action
             android:id="@+id/action_infoFragment_to_listFragment"
             app:destination="@id/listFragment" />
+        <argument
+            android:name="carId"
+            app:argType="integer" />
+        <argument
+            android:name="position"
+            app:argType="integer" />
     </fragment>
 </navigation>

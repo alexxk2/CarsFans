@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/car_constraint_layout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="80dp"
     android:padding="5dp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -29,16 +29,16 @@
                 android:scaleType="centerCrop" />
 
             <TextView
-                android:id="@+id/car_info"
+                android:id="@+id/brand_name"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
+                android:layout_marginHorizontal="@dimen/car_name_margin_horizontal"
                 android:layout_weight="60"
                 android:ellipsize="end"
                 android:gravity="center"
                 android:lines="2"
                 android:text="@string/default_text"
-                android:textSize="18sp" />
+                android:textSize="@dimen/car_name_text_size" />
 
         </LinearLayout>
 
