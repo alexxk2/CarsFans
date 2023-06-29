@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Cars Fans</string>
+
+    <!--List screen-->
+    <string name="car_image">car_image</string>
+    <string name="default_text">default text</string>
+    <string name="back_button">back button</string>
+    <string name="car_info_text">%1$s %2$s %3$s %4$s %5$s %6$d</string>
+    <string name="something_went_wrong">Something went wrong. Check your internet connection</string>
+
+    <!--Info screen-->
+    <string name="brand_name">Brand: %1$s</string>
+    <string name="model_name">Model: %1$s</string>
+    <string name="year">Year: %1$d</string>
+    <string name="engine">Engine: %1$s</string>
+    <string name="transmission">Transmission: %1$s</string>
+    <string name="account_image">account image</string>
+    <string name="account_name">default acc name</string>
+    <string name="like_image">like image</string>
+
 </resources>
