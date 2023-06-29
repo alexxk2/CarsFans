@@ -4,7 +4,7 @@
     <!--List screen-->
     <dimen name="car_name_margin_horizontal">10dp</dimen>
     <dimen name="car_name_text_size">14sp</dimen>
-    <dimen name="bottom_margin_list">8dp</dimen>
+    <dimen name="bottom_margin_list">16dp</dimen>
 
     <!--Info screen-->
     <dimen name="back_button_margin">24dp</dimen>
