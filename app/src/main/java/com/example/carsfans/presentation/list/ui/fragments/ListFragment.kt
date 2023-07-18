@@ -21,6 +21,7 @@ import com.example.carsfans.presentation.list.view_model.models.ApiStatus
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
+
 class ListFragment : Fragment() {
 
     private var _binding: FragmentListBinding? = null
@@ -147,6 +148,7 @@ class ListFragment : Fragment() {
         binding.progressBar.visibility = View.GONE
         binding.errorMessage.visibility = View.VISIBLE
         binding.refreshButton.visibility = View.VISIBLE
+
     }
 
     private fun scrollToNeededItem(list: List<CarInfo>){
