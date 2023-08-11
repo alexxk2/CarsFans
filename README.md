@@ -16,6 +16,10 @@
 + Debounce  
 + Glide
 
+## Gif flow приложения
+
+<img src="https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/flow.gif" width="340" height="699" />  <br>
+
 ## Скриншот одного из экранов
 
 ![Info screen](https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/screenshot.jpg)
